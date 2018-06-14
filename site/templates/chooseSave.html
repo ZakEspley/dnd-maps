@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>D&amp;D Map Helper </title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+    <body class="text-center vsc-initialized">
+
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
+        <script src="static/js/index.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <link href="static/css/cover.css" rel="stylesheet">
+
+        
+        
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+              <div class="inner centered">
+                <h3 class="masthead-brand">D&amp;D Map Helper</h3>
+                <!-- <nav class="nav nav-masthead justify-content-center">
+                  <a class="nav-link active" href="https://getbootstrap.com/docs/4.1/examples/cover/#">Home</a>
+                  <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/cover/#">Features</a>
+                  <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/cover/#">Contact</a>
+                </nav> -->
+              </div>
+            </header>
+      
+            <main role="main" class="inner cover">
+              <h1 class="cover-heading">Select you saved game</h1>
+              <!-- <p class="lead">Start by uploading an image of a map or picking an old save.</p> -->
+              <p>
+                <form action="/load" method="post">
+                    <select name="savefile" id="" class="custom-select custom-select-lg mb-3">
+                        {% for save in savelist %}
+                            <option value="{{ save }}">{{ save }}</option>
+                        {% endfor %}
+                    </select>
+                    <input name="infoValue" type="submit" value="Start" class="btn btn-lg btn-secondary">
+                </form>
+              </p>
+                
+                
+
+                
+                <!-- <form action="" method="post" enctype="multipart/form-data">
+                  <input type="file" name="image_file" id="">
+                  <input type="submit" value="Submit">
+                </form> -->
+                  <!-- <label class="custom-file-label" for="customFile">Choose file</label> -->
+                
+              
+            </main>
+      
+            <footer class="mastfoot mt-auto">
+              <div class="inner">
+                <p>Have Fun.</p>
+              </div>
+            </footer>
+          </div>
+
+        
+    </body>
+</html>
