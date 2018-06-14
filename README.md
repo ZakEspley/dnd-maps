@@ -2,7 +2,7 @@
 
 ## Installing
 
-Just clone the repo then run the DaDMapHelper.exe. It should open a window in your default browser, hopefully Chrome as you will want to cast one tab.
+Just clone the repo then run the DaDMapHelper.exe in the site folder. It should open a window in your default browser, hopefully Chrome as you will want to cast one tab.
 
 ## Usage
 
